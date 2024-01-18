@@ -1,0 +1,93 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: 10px;
+    padding:100px;
+    background-color: #231a37;
+    width: 200px;
+
+}
+
+#head{
+    color: white;
+    margin: 0px;
+    padding-top:10px ;
+    align-content: flex-start;
+
+}
+
+.card{  
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0px; 
+    width: 100px;
+}
+.tabooWordClass{ 
+    background-color: #f9c3a1 ; 
+}
+.word{
+    background-color: #eb5a61 ;
+    
+}
+.btnContainer{
+    
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+.btn{
+    color: white;
+}
+#taboo{
+    background-color: #eb5a61;
+}
+
+#pass{
+    background-color:#253789 ;
+}
+#true{
+    background-color:#005361 ;
+}
+
+
+#topContainer{ 
+    
+    display: flex;  
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+
+    
+}
+
+#remainingPass{
+    background-color: #9191c5;
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+}
+#point{
+    background-color: #9191c5;
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+}
+#remainingTime{
+    background-color: #9191c5;
+    padding: 5px;
+    margin: 0px;
+}
