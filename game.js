@@ -66,9 +66,10 @@ document.getElementById("true").addEventListener("click", () => {
     pointTextElement.innerText = "Puan" + "\n" + pointCounter;
   }
 });
+let passValue = localStorage.getItem("passCount");
 
 let passTextElement = document.getElementById("remainingPass");
-passTextElement.innerText += "\n" + passCounter;
+passTextElement.innerText += "\n" + passValue;
 
 let pointTextElement = document.getElementById("point");
 pointTextElement.innerText += "\n" + pointCounter;
@@ -99,9 +100,10 @@ function startTimer(duration, display) {
     }
   }, 1000);
 }
+let timeValue = localStorage.getItem("timeCount");
 let display = document.getElementById("remainingTime");
-startTimer(119, display);
-var timer = 120,
+startTimer(timeValue - 1, display);
+var timer = timeValue,
   minutes,
   seconds;
 minutes = parseInt(timer / 60, 10);

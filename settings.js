@@ -1,4 +1,4 @@
-document.getElementById("newGame").addEventListener("click", () => {
+document.getElementById("mainMenu").addEventListener("click", () => {
   window.location.replace("index.html");
 });
 
