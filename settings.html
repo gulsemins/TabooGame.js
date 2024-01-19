@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <title>Settings</title>
+  </head>
+  <body>
+    <div class="back">
+      <div id="name">
+        <h1>Ayarlar</h1>
+      </div>
+      <div id="timeSetter">
+        <p id="timeText">Süre:</p>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="30"
+            max="120"
+            value="120"
+            class="timeSlider"
+            id="myTimeRange"
+          />
+        </div>
+      </div>
+      <div id="passSetter">
+        <p id="passText">Pas: 3</p>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="5"
+            value="3"
+            class="slider"
+            id="myRange"
+          />
+        </div>
+      </div>
+
+      <div id="btnContainer">
+        <button class="btn" id="save" type="submit">Save</button>
+
+        <button class="btn" id="newGame" type="submit">Main Menü</button>
+        <br />
+      </div>
+    </div>
+    <script type="text/javascript" src="settings.js"></script>
+  </body>
+</html>
