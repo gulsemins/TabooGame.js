@@ -1,33 +1,3 @@
-let wordsList = [
-  {
-    word: "Staj",
-    tabooWords: ["Öğrenci", "Çalışmak", "Üniversite", "Tecrübe", "İş"],
-  },
-  {
-    word: "Empati",
-    tabooWords: ["Duygusal", "Anlama", "Diyalog", "İlişki", "Paylaşım"],
-  },
-  {
-    word: "Poker",
-    tabooWords: ["Kumar", "Destek", "Şans", "Bahis", "Blöf"],
-  },
-  {
-    word: "Dazlak",
-    tabooWords: ["Kelle", "Sakal", "Saç", "Jilet", "Tıraş"],
-  },
-  {
-    word: "Sürpriz",
-    tabooWords: ["Tahmin", "Plan", "Bilgi", "Önceden", "Beklenti"],
-  },
-  {
-    word: "Rezervasyon",
-    tabooWords: ["Yer", "Otel", "Restoran", "Randevu", "Saat"],
-  },
-  {
-    word: "Keman",
-    tabooWords: ["Müzik", "Enstrüman", "Yay", "Klasik", "Orkestra"],
-  },
-];
 let usedWords = [];
 
 function getRandomWord() {
@@ -82,6 +52,10 @@ document.getElementById("taboo").addEventListener("click", () => {
   pointTextElement.innerText = "Puan" + "\n" + pointCounter;
 });
 
+document.getElementById("popup").addEventListener("click", () => {
+  window.location.replace("index.html");
+});
+
 function startTimer(duration, display) {
   var timer = duration,
     minutes,
@@ -95,8 +69,14 @@ function startTimer(duration, display) {
 
     display.innerText = "Süre" + "\n" + minutes + ":" + seconds;
 
-    if (--timer < 0) {
-      timer = duration;
+    if (timer == 0) {
+      let popup = document.getElementById("popup");
+      popup.style.display = "block"; //jsden css değiştirmek içi
+      document.getElementById("true").disabled = true;
+      document.getElementById("pass").disabled = true;
+      document.getElementById("taboo").disabled = true;
+    } else {
+      --timer;
     }
   }, 1000);
 }

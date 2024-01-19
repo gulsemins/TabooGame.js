@@ -3,6 +3,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;  
+    
 }
 
 .back{
@@ -14,6 +15,9 @@ body{
     padding:100px;
     background-color: #231a37;
     width: 200px;
+    border-radius: 25px;
+    
+
 
 }
 
@@ -31,9 +35,12 @@ body{
     padding: 20px;
     margin: 0px; 
     width: 100px;
+    border-radius: 4px;
+    
 }
 .tabooWordClass{ 
     background-color: #f9c3a1 ; 
+
 }
 .word{
     background-color: #eb5a61 ;
@@ -48,6 +55,7 @@ body{
 }
 .btn{
     color: white;
+    border-radius: 4px;
 }
 #taboo{
     background-color: #eb5a61;
@@ -70,6 +78,7 @@ body{
     color: white;
     margin: 0px;
     padding: 0px;
+    border-radius: 4px;
 
     
 }
@@ -79,15 +88,47 @@ body{
     padding: 5px;
     margin: 0px;
     text-align: center;
+    border-radius: 4px;
 }
 #point{
     background-color: #9191c5;
     padding: 5px;
     margin: 0px;
     text-align: center;
+    border-radius: 4px;
 }
 #remainingTime{
     background-color: #9191c5;
     padding: 5px;
     margin: 0px;
+    border-radius: 4px;
+}
+
+
+#popup{
+    display: none;
+    width: 300px;
+    background:#ddaacc ;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left:50% ;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #fff;
+}
+
+#popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #d1b2a3;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2) ;
 }

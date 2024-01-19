@@ -10,6 +10,7 @@ document.getElementById("myRange").addEventListener("input", (event) => {
 let slider = document.getElementById("myRange");
 document.getElementById("save").addEventListener("click", () => {
   localStorage.setItem("passCount", slider.value);
+  window.location.replace("index.html");
 });
 
 let timeText = document.getElementById("timeText");
