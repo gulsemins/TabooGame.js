@@ -28,12 +28,26 @@ let wordsList = [
     tabooWords: ["Müzik", "Enstrüman", "Yay", "Klasik", "Orkestra"],
   },
 ];
+let usedWords = [];
+
+function getRandomWord() {
+  while (true) {
+    let randomIndex = Math.floor(Math.random() * wordsList.length);
+    if (!usedWords.includes(randomIndex)) {
+      usedWords.push(randomIndex);
+      return randomIndex;
+    }
+    if(usedWords.length == wordsList.length){
+      alert("Oyun Bitti")
+    }
+  }
+}
 
 let passCounter = 3;
-let wordCounter = 0;
+let wordCounter = getRandomWord();
 document.getElementById("pass").addEventListener("click", () => {
   if (passCounter != 0) {
-    wordCounter = Math.floor(Math.random() * wordsList.length);
+    wordCounter =getRandomWord();
     passCounter--;
     changeWord();
     let passTextElement = document.getElementById("remainingPass");
@@ -45,7 +59,7 @@ let pointCounter = 0;
 document.getElementById("true").addEventListener("click", () => {
   
   if (pointCounter < 10) {
-    wordCounter = Math.floor(Math.random() * wordsList.length);
+    wordCounter = getRandomWord();
     pointCounter++;
     changeWord();
 
@@ -61,23 +75,22 @@ let pointTextElement = document.getElementById("point");
 pointTextElement.innerText += "\n" + pointCounter;
 
 document.getElementById("taboo").addEventListener("click", () => {
-    console.log( pointCounter)
-    wordCounter = Math.floor(Math.random() * wordsList.length);
+    wordCounter = getRandomWord();
     pointCounter--;
     changeWord();
     let pointTextElement = document.getElementById("point");
     pointTextElement.innerText = "Puan" + "\n" + pointCounter;
-    console.log( pointCounter)
 
 })
 
 function changeWord() {
+  const currentWord = wordsList[wordCounter];
   let word = document.getElementsByClassName("word")[0];
   let tabooWordsElements = document.getElementsByClassName("tabooWordClass");
 
-  word.innerText = wordsList[wordCounter].word;
+  word.innerText = currentWord.word;
   for (let i = 0; i < tabooWordsElements.length; i++) {
-    tabooWordsElements[i].innerText = wordsList[wordCounter].tabooWords[i];
+    tabooWordsElements[i].innerText = currentWord.tabooWords[i];
   }
 }
 changeWord();
