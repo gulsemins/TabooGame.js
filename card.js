@@ -37,8 +37,8 @@ function getRandomWord() {
       usedWords.push(randomIndex);
       return randomIndex;
     }
-    if(usedWords.length == wordsList.length){
-      alert("Oyun Bitti")
+    if (usedWords.length == wordsList.length) {
+      alert("Oyun Bitti");
     }
   }
 }
@@ -47,7 +47,7 @@ let passCounter = 3;
 let wordCounter = getRandomWord();
 document.getElementById("pass").addEventListener("click", () => {
   if (passCounter != 0) {
-    wordCounter =getRandomWord();
+    wordCounter = getRandomWord();
     passCounter--;
     changeWord();
     let passTextElement = document.getElementById("remainingPass");
@@ -57,7 +57,6 @@ document.getElementById("pass").addEventListener("click", () => {
 
 let pointCounter = 0;
 document.getElementById("true").addEventListener("click", () => {
-  
   if (pointCounter < 10) {
     wordCounter = getRandomWord();
     pointCounter++;
@@ -75,13 +74,43 @@ let pointTextElement = document.getElementById("point");
 pointTextElement.innerText += "\n" + pointCounter;
 
 document.getElementById("taboo").addEventListener("click", () => {
-    wordCounter = getRandomWord();
-    pointCounter--;
-    changeWord();
-    let pointTextElement = document.getElementById("point");
-    pointTextElement.innerText = "Puan" + "\n" + pointCounter;
+  wordCounter = getRandomWord();
+  pointCounter--;
+  changeWord();
+  let pointTextElement = document.getElementById("point");
+  pointTextElement.innerText = "Puan" + "\n" + pointCounter;
+});
 
-})
+function startTimer(duration, display) {
+  var timer = duration,
+    minutes,
+    seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.innerText = "Süre" + "\n" + minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
+let display = document.getElementById("remainingTime");
+startTimer(119, display);
+var timer = 120,
+  minutes,
+  seconds;
+minutes = parseInt(timer / 60, 10);
+seconds = parseInt(timer % 60, 10);
+
+minutes = minutes < 10 ? "0" + minutes : minutes;
+seconds = seconds < 10 ? "0" + seconds : seconds;
+
+display.innerText = "Süre" + "\n" + minutes + ":" + seconds;
 
 function changeWord() {
   const currentWord = wordsList[wordCounter];
