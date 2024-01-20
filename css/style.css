@@ -151,3 +151,8 @@ body{
     box-shadow: 0 5px rgba(0, 0, 0, 0.2) ;
     font-family: Georgia;
 }
+
+.my-custom-width {
+    width: 300px; /* Adjust as needed */
+    height: 350px;
+  }
