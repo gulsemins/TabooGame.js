@@ -27,6 +27,7 @@ body{
     color: #b17a61;
     font-family: Georgia;
     text-align: center;
+    font-size: 18px;
     
    
 }
@@ -68,6 +69,7 @@ body{
     border-radius: 8px;
     font-weight: 900;
     margin: 5px;
+    margin-bottom: 30px;
 
 }
 #timeSetter{
