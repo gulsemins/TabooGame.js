@@ -62,10 +62,11 @@ document.getElementById("goBack").addEventListener("click", () => {
     //text: "You won't be able to revert this!",
     icon: "warning",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
+    confirmButtonColor: "##9191c5",
+    cancelButtonColor: "#eb5a61",
     confirmButtonText: "Evet",
     cancelButtonText: "Hayır",
+    customClass: "my-custom-width",
   }).then((result) => {
     if (result.isConfirmed) {
       window.location.replace("index.html");
