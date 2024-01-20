@@ -27,7 +27,7 @@ document.getElementById("pass").addEventListener("click", () => {
 
 let pointCounter = 0;
 document.getElementById("true").addEventListener("click", () => {
-  if (pointCounter < 10) {
+  if (pointCounter < wordsList.length) {
     wordCounter = getRandomWord();
     pointCounter++;
     changeWord();
@@ -54,6 +54,23 @@ document.getElementById("taboo").addEventListener("click", () => {
 
 document.getElementById("popup").addEventListener("click", () => {
   window.location.replace("index.html");
+});
+
+document.getElementById("goBack").addEventListener("click", () => {
+  Swal.fire({
+    title: "Oyundan çıkmak istediğinize emin misiniz?",
+    //text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Evet",
+    cancelButtonText: "Hayır",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.replace("index.html");
+    }
+  });
 });
 
 function startTimer(duration, display) {

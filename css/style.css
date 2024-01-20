@@ -12,11 +12,14 @@ body{
     justify-content: center;
     align-items: center;    
     gap: 10px;
-    padding:100px;
+    padding-top: 200px;
+    padding-right: 100px;
+    padding-bottom: 200px;
+    padding-left: 100px;
     background-color: #231a37;
     width: 200px;
     border-radius: 25px;
-    
+    height: 500px;
 
 
 }
@@ -108,7 +111,7 @@ body{
 #popup{
     display: none;
     width: 300px;
-    background:#ddaacc ;
+    background:#f3d0e7 ;
     border-radius: 6px;
     position: absolute;
     top: 50%;
@@ -117,13 +120,14 @@ body{
     text-align: center;
     padding: 0 30px 30px;
     color: #fff;
+    box-shadow: 0 5px rgba(250, 131, 204, 0.2) 
 }
 
 #popup button{
     width: 100%;
     margin-top: 50px;
     padding: 10px 0;
-    background: #d1b2a3;
+    background: #e2cbc0;
     color: #fff;
     border: 0;
     outline: none;
@@ -131,4 +135,19 @@ body{
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 5px rgba(0, 0, 0, 0.2) ;
+}
+
+#goBack{
+    width: 50%;
+    margin-top: 5px;
+    padding: 5px 0;
+    background: #f9c3a1;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2) ;
+    font-family: Georgia;
 }
